@@ -1,0 +1,16 @@
+{
+  "name": "noticebord",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "javascript",
+    "backend",
+    "Noticbord"
+  ],
+  "author": "Sandesh Pol with team 7",
+  "license": "ISC",
+  "description": ""
+}
