@@ -17,38 +17,45 @@ const noticeSchema = new Schema(
             enum: ['Assignment Deadlines', 'Exam Dates', 'Timetables', 'Urgent Notices', 'General Announcements'],
             required: true
         },
+        type: {
+            type: String,
+            enum: ['Short', 'Long', 'Special'],
+        },
         deadline: {
-            type: Date, // For time-bound notices
+            type: Date, 
             required: false
         },
         postedBy: {
-            type: Schema.Types.ObjectId, // Reference to the admin user
+            type: Schema.Types.ObjectId, 
             ref: 'User',
             required: true
         },
         visibility: {
             type: String,
-            enum: ['Public', 'Private'], // Controls access to the notice
+            enum: ['Public', 'Private'],
             default: 'Public',
             required: true
         },
         department: {
-            type: String, // For targeting notices to specific departments/classes
+            type: String, 
             required: false,
             trim: true
         },
         isActive: {
-            type: Boolean, // Whether the notice is currently active
+            type: Boolean, 
             default: true
         },
         verified: {
-            type: Boolean, // Indicates whether the notice is verified
-            default: false, // Default to false, requiring verification
+            type: Boolean, 
+            default: false, 
             required: true
         },
+        attachment: {
+            type: String,  // Store the file URL or path after upload
+        }
     },
     {
-        timestamps: true // Automatically adds `createdAt` and `updatedAt` fields
+        timestamps: true 
     }
 );
 
