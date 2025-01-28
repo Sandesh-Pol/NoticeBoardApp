@@ -21,6 +21,6 @@ app.use(cookieParser())
 //routes declaration
 
 
-// http://localhost:8000/api/v1/users/register
+// http://localhost:8001/api/v1/users/register
 
 export { app }
