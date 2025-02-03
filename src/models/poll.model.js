@@ -15,7 +15,7 @@ const pollSchema = new Schema(
                 },
                 votes: {
                     type: Number,
-                    default: 0 // Tracks the number of votes for this option
+                    default: 0 
                 }
             }
         ],
